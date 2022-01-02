@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="/static/main.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</head>
+<body>
+<nav  class="navbar">
+    <img src="/static/logo-unesco.svg">
+     <span class="navbar-text">IHE Delft Institute for Water Education</span>
+</nav >
+<h2 class="heading">Dialogflow Chatbot Demo</h2>
+
+<div class="container remove-all-margin">
+  <div class="row">
+    <div class="col-3">
+         <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h4><i>Study Area:</i></h4>
+                        <div style="color: red">Do Lo-Yen Nghia, Ha Dong District, Hanoi, Vietnam</div>
+                    <img src="/static/study-area1.png" height="90%" width="90%">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                {{total_area}} square km Area,
+                {{count_pipes}} pipes
+                </div>
+            </div>
+         </div>
+    </div>
+    <div class="col-6 d-flex justify-content-center text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <iframe
+                        allow="microphone;"
+                        width="350"
+                        height="450"
+                        src="https://console.dialogflow.com/api-client/demo/embedded/fc929356-a0d4-4a3c-b0c8-d4ff57c371bb">
+                    </iframe>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                  <h4><i>Weather Forecast</i></h4>
+                  <div id="carouselExampleIndicators" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                          <div class="card d-block w-100">
+                              <img src="/static/{{weather_img}}" class="card-img-top" alt="Sunny" style=" height:3rem">
+                              <div class="card-body">
+                                  <h5 class="card-title">{{degree}} C, {{rainfall}}in Rainfall</h5>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="carousel-item">
+                         <div class="card d-block w-100">
+                          <img src="/static/rain.svg" class="card-img-top" alt="Rainy" style=" height:3rem">
+                          <div class="card-body">
+                              <h5 class="card-title">32 C, 50in Rainfall</h5>
+                         </div>
+                      </div>
+                      </div>
+                      <div class="carousel-item">
+                         <div class="card d-block w-100">
+                          <img src="/static/rain.svg" class="card-img-top" alt="Rainy" style=" height:3rem">
+                          <div class="card-body">
+                              <h5 class="card-title">32 C, 50in Rainfall</h5>
+                         </div>
+                      </div>
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-3">
+        <h4><i>Chatbot Development Process</i></h4>
+        <img src="/static/thesisdevlpt.jpg" width="70%" height="50%">
+    </div>
+  </div>
+</div>
+<script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+<df-messenger
+  intent="WELCOME"
+  chat-title="ChatbotDemoExperience"
+  agent-id="fc929356-a0d4-4a3c-b0c8-d4ff57c371bb"
+  language-code="en"
+></df-messenger>
+
+<meta name="viewport" content="width-device-width, initial-scale=1">
+
+</body>
+
+</html>

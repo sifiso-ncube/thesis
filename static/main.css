@@ -1,0 +1,15 @@
+.heading {
+    text-align: center;
+    font-family: Consolas;
+}
+
+.navbar {
+    background-color:darkblue;
+    color:white;
+    text-align: left
+}
+
+.remove-all-margin{
+    margin:0 ! important;
+}
+h3 {font}
