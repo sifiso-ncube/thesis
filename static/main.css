@@ -1,15 +1,52 @@
 .heading {
     text-align: center;
-    font-family: Consolas;
+    font-family: verdana,Georgia,Cambria,Times New Roman;
+	color: firebrick;
 }
 
 .navbar {
     background-color:darkblue;
     color:white;
-    text-align: left
 }
 
-.remove-all-margin{
-    margin:0 ! important;
+.grid-container
+{
+	display: grid;
+	grid-template-columns: auto auto auto;
+	grid-gap: 10px;
+	
+	padding: 10px;
 }
-h3 {font}
+
+.column-left
+{
+ 	width:100%;
+ 	background-color: none;
+ 	display:inline-block;
+	vertical-align: top;
+ 	padding:5px;
+ }
+ 
+.column-middle
+{
+ 	width:100%;
+ 	display:inline-block;
+ 	vertical-align: top;
+ 	padding:5px;
+ }
+ 
+.column-right
+{
+ 	width:100%; 	
+	background-color: none;
+	display:inline-block;
+ 	vertical-align: top;
+ 	padding:5px;
+ }
+ 
+p{	
+	background-color: AliceBlue;
+	font-family: Lucida Console,Georgia,Cambria,Times New Roman,Times,serif;
+	text-align: center;
+}
+

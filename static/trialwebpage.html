@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="main.css" rel="stylesheet" />
+	
+</head>
+
+<body>
+<nav  class="navbar">
+    <img src="logo-unesco.svg">
+     <span class="navbar-text"; style="text-align: right"> <b> IHE Delft Institute for Water Education </b> </span>
+</nav >
+<h1 class="heading"; style= "color:firebrick"> Dialogflow Chatbot Demo</h1>
+
+
+<p> This chatbot  extracts information from a SWMM model for the purposes of identifying flooded pipes in the Do Lo-Yen Nghia ward in Hanoi Vietnam </p>  
+
+	
+	<div class ="grid-container">
+	
+		<div class="column-left">
+			<h4><i>Study Area:</i></h4>
+			<div style="color: MidnightBlue">Do Lo-Yen Nghia, Ha Dong District, Hanoi, Vietnam</div>
+			<img src="study-area1.png" height="70%" width="70%">
+		</div>
+		<!--An iframe specifies an inline frame. An inline frmae is used to embed another doc within the current html doc. -->
+		<div>
+			<iframe						
+				allow="microphone;"    	 
+				width="350"
+				height="450"
+				src="https://console.dialogflow.com/api-client/demo/embedded/fc929356-a0d4-4a3c-b0c8-d4ff57c371bb">
+			</iframe>
+		</div>				
+		<div class= "column-right">
+			<h4><i> Dialogflow Chatbot Flow Path</i></h4>
+			<img src="dialogflow-flow-path2.png" width="100%" height="60%">
+		</div>
+	</div>
+
+<script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+<df-messenger
+  intent="WELCOME"
+  chat-title="ChatbotDemoExperience"
+  agent-id="fc929356-a0d4-4a3c-b0c8-d4ff57c371bb"
+  language-code="en"
+></df-messenger>
+
+</body>
+</html>
